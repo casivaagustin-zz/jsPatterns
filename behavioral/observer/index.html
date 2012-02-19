@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script type='text/javascript' src='observer.js'></script>
+  </head>
+  <body>
+    <script type='text/javascript'>
+      
+      function dummy1() {
+        console.log('Hello from D1');
+      }
+      
+      function dummy2(topic, args) {
+        console.log('Hello' + topic + ' ' + args[0]); 
+      }
+      
+      pubsub.subscribe('test', dummy1);
+      pubsub.subscribe('test', dummy2);
+      pubsub.publish('test', ['Hello Hell']);
+      pubsub.unsubscribe('test', dummy2);
+      pubsub.publish('test');
+    </script>
+  </body>
+</html>
