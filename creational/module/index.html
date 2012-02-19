@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script type='text/javascript' src='module.js'></script>
+  </head>
+  <body>
+    <script type='text/javascript'>
+      console.log('Starts Counter : ', myModule.getCounter());
+      myModule.increment();
+      myModule.increment();
+      console.log('Now should be 2 : ', myModule.getCounter());
+      myModule.decrement();
+      console.log('Now Should be 1 : ', myModule.getCounter());      
+      myModule.increment(9);
+      console.log('We added 9 to test a paramter, 1 + 9 = 10 : ', myModule.getCounter());
+    </script>
+  </body>
+</html>
